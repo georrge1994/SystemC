@@ -1,5 +1,5 @@
 $date
-     Feb 18, 2017       14:14:20
+     Mar 09, 2017       22:46:24
 $end
 
 $version
@@ -31,222 +31,199 @@ $dumpvars
 b0 aaaae
 $end
 
-#500
-0aaaaa
-
-#1000
-1aaaaa
-
-#1500
-0aaaaa
-
 #2000
-1aaaaa
-
-#2500
-0aaaaa
-
-#3000
-1aaaaa
-
-#3500
 0aaaaa
 
 #4000
 1aaaaa
 
-#4500
-0aaaaa
-
-#5000
-1aaaaa
-
-#5500
-0aaaaa
-
 #6000
-1aaaaa
+0aaaaa
 0aaaab
 0aaaac
-b1 aaaae
-
-#6500
-0aaaaa
-
-#7000
-1aaaaa
-b10 aaaae
-
-#7500
-0aaaaa
 
 #8000
 1aaaaa
-b11 aaaae
-
-#8500
-0aaaaa
-
-#9000
-1aaaaa
-b100 aaaae
-
-#9500
-0aaaaa
 
 #10000
-1aaaaa
-b101 aaaae
-
-#10500
-0aaaaa
-
-#11000
-1aaaaa
-b110 aaaae
-
-#11500
 0aaaaa
 
 #12000
 1aaaaa
-b111 aaaae
-
-#12500
-0aaaaa
-
-#13000
-1aaaaa
-b1000 aaaae
-
-#13500
-0aaaaa
 
 #14000
-1aaaaa
-0aaaad
-b111 aaaae
-
-#14500
 0aaaaa
-
-#15000
-1aaaaa
-b110 aaaae
-
-#15500
-0aaaaa
+1aaaac
 
 #16000
 1aaaaa
-b101 aaaae
-
-#16500
-0aaaaa
-
-#17000
-1aaaaa
-b100 aaaae
-
-#17500
-0aaaaa
+b1 aaaae
 
 #18000
-1aaaaa
-b11 aaaae
-
-#18500
-0aaaaa
-
-#19000
-1aaaaa
-b10 aaaae
-
-#19500
 0aaaaa
 
 #20000
 1aaaaa
-b1 aaaae
-
-#20500
-0aaaaa
-
-#21000
-1aaaaa
-1aaaab
-1aaaad
-b0 aaaae
-
-#21500
-0aaaaa
+b10 aaaae
 
 #22000
-1aaaaa
-
-#22500
-0aaaaa
-
-#23000
-1aaaaa
-
-#23500
 0aaaaa
 
 #24000
 1aaaaa
-0aaaab
-b1 aaaae
-
-#24500
-0aaaaa
-
-#25000
-1aaaaa
-b10 aaaae
-
-#25500
-0aaaaa
-
-#26000
-1aaaaa
 b11 aaaae
 
-#26500
-0aaaaa
-1aaaac
-
-#27000
-1aaaaa
-b0 aaaae
-
-#27500
+#26000
 0aaaaa
 
 #28000
 1aaaaa
-
-#28500
-0aaaaa
-
-#29000
-1aaaaa
-
-#29500
-0aaaaa
+b100 aaaae
 
 #30000
-1aaaaa
-
-#30500
-0aaaaa
-
-#31000
-1aaaaa
-
-#31500
 0aaaaa
 
 #32000
+1aaaaa
+b101 aaaae
+
+#34000
+0aaaaa
+
+#36000
+1aaaaa
+b110 aaaae
+
+#38000
+0aaaaa
+
+#40000
+1aaaaa
+b111 aaaae
+
+#42000
+0aaaaa
+
+#44000
+1aaaaa
+b1000 aaaae
+
+#46000
+0aaaaa
+0aaaad
+
+#48000
+1aaaaa
+b111 aaaae
+
+#50000
+0aaaaa
+
+#52000
+1aaaaa
+b110 aaaae
+
+#54000
+0aaaaa
+
+#56000
+1aaaaa
+b101 aaaae
+
+#58000
+0aaaaa
+
+#60000
+1aaaaa
+b100 aaaae
+
+#62000
+0aaaaa
+
+#64000
+1aaaaa
+b11 aaaae
+
+#66000
+0aaaaa
+
+#68000
+1aaaaa
+b10 aaaae
+
+#70000
+0aaaaa
+
+#72000
+1aaaaa
+b1 aaaae
+
+#74000
+0aaaaa
+
+#76000
+1aaaaa
+b0 aaaae
+
+#78000
+0aaaaa
+
+#80000
+1aaaaa
+b11111111 aaaae
+
+#82000
+0aaaaa
+
+#83000
+1aaaab
+b0 aaaae
+
+#84000
+1aaaaa
+
+#86000
+0aaaaa
+
+#88000
+1aaaaa
+
+#90000
+0aaaaa
+
+#91000
+0aaaab
+
+#92000
+1aaaaa
+b11111111 aaaae
+
+#94000
+0aaaaa
+
+#96000
+1aaaaa
+b11111110 aaaae
+
+#98000
+0aaaaa
+
+#99000
+0aaaac
+
+#100000
+1aaaaa
+b0 aaaae
+
+#102000
+0aaaaa
+
+#104000
+1aaaaa
+
+#106000
+0aaaaa
+
+#108000
 1aaaaa
 

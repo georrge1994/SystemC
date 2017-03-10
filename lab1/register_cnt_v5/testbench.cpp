@@ -10,7 +10,7 @@
       }
 
 int sc_main(int argc, char* argv[]) {
-    sc_clock clock("clock", 1, SC_NS);
+    sc_clock clock("clock", 4, SC_NS);
     sc_signal<bool> reset;
     sc_signal<bool> sreset_n;
     sc_signal<bool>  up_down;
@@ -38,47 +38,59 @@ int sc_main(int argc, char* argv[]) {
     reset = 1;      // Assert the reset
     sreset_n = 1;   // set sreset
     cout << "@" << sc_time_stamp() << " Asserting reset\n" << endl;
-
+    assert(register_out.read() == 0);
+    
     sc_start(6, SC_NS); // wait 6 clk
-
+    
     reset = 0;      // De-assert the reset
-    sreset_n = 0;   // De-assert the sreset
-    cout << "@" << sc_time_stamp() << " De-Asserting reset\n" << endl;
-
+    sreset_n = 0;   // set sreset
+    sc_start(8, SC_NS); // wait 6 clk
+    cout << "@" << sc_time_stamp() << " Asserting reset\n" << endl;
+    assert(register_out.read() == 0);
+    
     // test by count up
-    cout << "\n Up count:" << endl;
+    reset = 0;      // De-assert the reset
+    sreset_n = 1;   // De-assert the sreset
     up_down = 1;
+    cout << "\n Up count:" << endl;
     for (i = 1; i < 9; i++) {  
-        sc_start(1, SC_NS);
+        sc_start(4, SC_NS);
         cout << "@" << sc_time_stamp() << " count = " << register_out.read() << endl;
         assert(register_out.read() == i);
     }
     
     // test by count down
-    cout << "\n Revers count:" << endl;
     up_down = 0;
-    for (i = 7; i > 0; i--) {  
-        sc_start(1, SC_NS);
+    cout << "\n Revers count:" << endl;
+    int assert_value;
+    for (i = 9; i > 0; i--) {  
+        if(i == 1)
+            assert_value = 255;
+        else
+            assert_value = i - 2;
+        sc_start(4, SC_NS);
         cout << "@" << sc_time_stamp() << " count = " << register_out.read() << endl;
-        assert(register_out.read() == i);
+        
+        assert(register_out.read() == assert_value);
     }
 
+    
     // test for asynch reset
-    up_down = 1;
+    sc_start(1, SC_NS);
     reset = 1; // Assert the reset
     cout << "@" << sc_time_stamp() << "Asynch Asserting reset\n" << endl;
-    sc_start(1, SC_NS);
+    sc_start(4, SC_NS);
     assert(register_out.read() == 0);
-    sc_start(2, SC_NS);
+    sc_start(4, SC_NS);
     reset = 0;
-    sc_start(2.5, SC_NS);
+    sc_start(8, SC_NS);
 
     //test for synch reset
-    sreset_n = 1; // Assert the reset
+    sreset_n = 0; // Assert the reset
     cout << "@" << sc_time_stamp() << " Synch Asserting reset\n" << endl;
-    sc_start(1, SC_NS);
+    sc_start(4, SC_NS);
     assert(register_out.read() == 0);
-    sc_start(5, SC_NS);
+    sc_start(6, SC_NS);
     
     cout << "@" << sc_time_stamp() << " Terminating simulation\n" << endl;
     sc_close_vcd_trace_file(wf);
