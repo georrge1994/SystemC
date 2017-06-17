@@ -11,7 +11,8 @@ SC_MODULE(fifo){
 	sc_out<sc_uint<8> > data_out;
 	sc_out<bool> empty;
 	sc_out<bool> full;
-
+        sc_out<sc_uint<4> > count_elements;
+        
 	enum e {max = 10};
 	unsigned int data[max];
 	int elements, first;
@@ -28,7 +29,8 @@ SC_MODULE(fifo){
 		pop("pop"),
 		data_out("data_out"),
 		empty("empty"),
-		full("full")
+		full("full"),
+                count_elements("count_elements")
 	{
 		cout << "Executing new" << endl;
         SC_CTHREAD(processing, clk.pos());

@@ -1,5 +1,5 @@
 $date
-     Mar 17, 2017       13:05:08
+     Jun 12, 2017       18:36:16
 $end
 
 $version
@@ -19,7 +19,7 @@ $var wire    1  aaaae  pop       $end
 $var wire    8  aaaaf  out [7:0]  $end
 $var wire    1  aaaag  empty       $end
 $var wire    1  aaaah  full       $end
-$var wire   32  aaaai  elements [31:0]  $end
+$var wire    4  aaaai  count_elements [3:0]  $end
 $upscope $end
 $enddefinitions  $end
 
@@ -53,6 +53,7 @@ b1 aaaac
 
 #8000
 1aaaaa
+0aaaag
 b1 aaaai
 
 #10000
@@ -61,7 +62,6 @@ b10 aaaac
 
 #12000
 1aaaaa
-0aaaag
 b10 aaaai
 
 #14000
@@ -126,6 +126,7 @@ b1010 aaaac
 
 #44000
 1aaaaa
+1aaaah
 b1010 aaaai
 
 #46000
@@ -134,7 +135,6 @@ b1011 aaaac
 
 #48000
 1aaaaa
-1aaaah
 
 #50000
 0aaaaa
@@ -144,6 +144,7 @@ b1011 aaaac
 #52000
 1aaaaa
 b1 aaaaf
+0aaaah
 b1001 aaaai
 
 #54000
@@ -152,7 +153,6 @@ b1001 aaaai
 #56000
 1aaaaa
 b10 aaaaf
-0aaaah
 b1000 aaaai
 
 #58000
@@ -186,4 +186,135 @@ b101 aaaai
 1aaaaa
 b110 aaaaf
 b100 aaaai
+
+#74000
+0aaaaa
+1aaaab
+0aaaae
+
+#76000
+1aaaaa
+b0 aaaaf
+1aaaag
+b0 aaaai
+
+#78000
+0aaaaa
+
+#80000
+1aaaaa
+
+#82000
+0aaaaa
+0aaaab
+1aaaae
+
+#84000
+1aaaaa
+
+#86000
+0aaaaa
+
+#88000
+1aaaaa
+
+#90000
+0aaaaa
+b1 aaaac
+1aaaad
+
+#92000
+1aaaaa
+0aaaag
+b1 aaaai
+
+#94000
+0aaaaa
+b10 aaaac
+
+#96000
+1aaaaa
+b1 aaaaf
+
+#98000
+0aaaaa
+b11 aaaac
+
+#100000
+1aaaaa
+b10 aaaaf
+
+#102000
+0aaaaa
+b100 aaaac
+
+#104000
+1aaaaa
+b11 aaaaf
+
+#106000
+0aaaaa
+b101 aaaac
+
+#108000
+1aaaaa
+b100 aaaaf
+
+#110000
+0aaaaa
+b110 aaaac
+
+#112000
+1aaaaa
+b101 aaaaf
+
+#114000
+0aaaaa
+b111 aaaac
+
+#116000
+1aaaaa
+b110 aaaaf
+
+#118000
+0aaaaa
+b1000 aaaac
+
+#120000
+1aaaaa
+b111 aaaaf
+
+#122000
+0aaaaa
+b1001 aaaac
+
+#124000
+1aaaaa
+b1000 aaaaf
+
+#126000
+0aaaaa
+b1010 aaaac
+
+#128000
+1aaaaa
+b1001 aaaaf
+
+#130000
+0aaaaa
+b1011 aaaac
+
+#132000
+1aaaaa
+b1010 aaaaf
+
+#134000
+0aaaaa
+0aaaad
+
+#136000
+1aaaaa
+b1011 aaaaf
+1aaaag
+b0 aaaai
 

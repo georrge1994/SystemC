@@ -15,6 +15,7 @@ int sc_main(int argc, char* argv[]) {
     sc_signal<bool> pop;
     sc_signal<bool> empty;
     sc_signal<bool> full;
+    sc_signal<sc_uint<4> > count_elements;
 
     fifo test("test");
     test.clk(clk);
@@ -25,7 +26,7 @@ int sc_main(int argc, char* argv[]) {
     test.data_out(data_out);
     test.empty(empty);
     test.full(full);
-        
+    test.count_elements(count_elements);
     // Open VCD file
     sc_trace_file *wf = sc_create_vcd_trace_file("fifo_waveform");
     // Dump the desired signals
@@ -37,7 +38,7 @@ int sc_main(int argc, char* argv[]) {
     sc_trace(wf, data_out, "out");
     sc_trace(wf, empty, "empty");
     sc_trace(wf, full, "full");
-    sc_trace(wf, test.elements, "elements");
+    sc_trace(wf, count_elements, "count_elements");
 
     // test of reset
     sreset_n = 1; // Assert the reset
@@ -49,16 +50,14 @@ int sc_main(int argc, char* argv[]) {
     // test of push a data (full)
     sreset_n = 0; // De-assert the reset
     push = true;
+    assert(empty.read() == 1);
     for(int i = 1; i < 12; i++){
-        cout << "@" << sc_time_stamp() << " De-Asserting reset\n" << endl;
+        cout << "@" << sc_time_stamp() << endl;
         data_in = i;
         sc_start(4, SC_NS);
-        if(i > 1)
-            assert(empty.read() == 0);
-        else
-            assert(empty.read() == 1);
+        assert(empty.read() == 0);
         
-        if(i>10)
+        if(i==10)
              assert(full.read() == 1);
     }
     
@@ -67,11 +66,35 @@ int sc_main(int argc, char* argv[]) {
     pop = true;
     push = false;
     for(int i = 1; i < 7; i++){
-        cout << "@" << sc_time_stamp() << " De-Asserting reset\n" << endl;
+        cout << "@" << sc_time_stamp() << endl;
         sc_start(4, SC_NS);
         assert(data_out.read() == i);
     }
 
-
+    pop = false;
+    sreset_n = 1;
+    sc_start(8, SC_NS);
+    sreset_n = 0;
+    // test of pop a data
+    pop = true;
+    for(int i = 1; i < 3; i++){
+        cout << "@" << sc_time_stamp() << endl;
+        sc_start(4, SC_NS);
+        assert(data_out.read() == 0);
+    }
+    
+        // test of pop a data
+    pop = true;
+    push = true;
+    for(int i = 1; i < 12; i++){
+        cout << "@" << sc_time_stamp() << endl;
+        data_in = i;
+        sc_start(4, SC_NS);
+        assert(empty.read() == 0);
+    }
+    
+    push = false;
+    sc_start(4, SC_NS);
+    assert(empty.read() == 1);
     return 0;
 }

@@ -6,11 +6,11 @@
 SC_MODULE(eightbit_register) {
     sc_in_clk clock; // Clock input of the design
     sc_in<bool> reset; // active high, asynchronous Reset input
-    sc_in<sc_uint<8> > register_in; // 8 bit vector input
-    sc_out<sc_uint<8> > register_out; // 8 bit vector output
+    sc_in<sc_uint<2> > register_in; // 2 bit vector input
+    sc_out<sc_uint<2> > register_out; // 2 bit vector output
 
     //------------Local Variables Here---------------------
-    sc_signal<sc_uint<8> > state;
+    sc_signal<sc_uint<2> > state;
     //------------Code Starts Here-------------------------
     // Below function implements actual register logic
 

@@ -1,5 +1,5 @@
 $date
-     Mar 03, 2017       18:35:59
+     Mar 24, 2017       13:16:12
 $end
 
 $version
@@ -13,8 +13,9 @@ $end
 $scope module SystemC $end
 $var wire    1  aaaaa  clock       $end
 $var wire    1  aaaab  reset       $end
-$var wire    8  aaaac  din [7:0]  $end
-$var wire    8  aaaad  dout [7:0]  $end
+$var wire    2  aaaac  link [1:0]  $end
+$var wire    2  aaaad  state [1:0]  $end
+$var wire    2  aaaae  out [1:0]  $end
 $upscope $end
 $enddefinitions  $end
 
@@ -27,6 +28,7 @@ $dumpvars
 1aaaab
 b0 aaaac
 b0 aaaad
+b1 aaaae
 $end
 
 #2000
@@ -50,6 +52,7 @@ b11 aaaac
 #12000
 1aaaaa
 b1 aaaad
+b11 aaaae
 
 #14000
 0aaaaa
@@ -57,6 +60,7 @@ b1 aaaad
 #16000
 1aaaaa
 b0 aaaad
+b1 aaaae
 
 #18000
 0aaaaa
@@ -65,6 +69,7 @@ b0 aaaac
 #20000
 1aaaaa
 b10 aaaad
+b10 aaaae
 
 #22000
 0aaaaa
@@ -73,6 +78,7 @@ b11 aaaac
 #24000
 1aaaaa
 b11 aaaad
+b0 aaaae
 
 #26000
 0aaaaa
@@ -80,6 +86,7 @@ b11 aaaad
 #28000
 1aaaaa
 b10 aaaad
+b10 aaaae
 
 #30000
 0aaaaa
@@ -88,14 +95,15 @@ b1 aaaac
 #32000
 1aaaaa
 b1 aaaad
+b11 aaaae
 
 #34000
 0aaaaa
-b11 aaaac
 
 #36000
 1aaaaa
 b0 aaaad
+b1 aaaae
 
 #38000
 0aaaaa
@@ -104,6 +112,7 @@ b0 aaaac
 #40000
 1aaaaa
 b10 aaaad
+b10 aaaae
 
 #42000
 0aaaaa
@@ -111,21 +120,35 @@ b10 aaaad
 #44000
 1aaaaa
 b0 aaaad
+b1 aaaae
 
 #46000
 0aaaaa
-b10 aaaac
+b11 aaaac
 
 #48000
 1aaaaa
+b1 aaaad
+b11 aaaae
 
 #50000
 0aaaaa
-1aaaab
+b0 aaaac
 
 #52000
 1aaaaa
+b11 aaaad
+b0 aaaae
 
 #54000
+0aaaaa
+1aaaab
+b0 aaaad
+b1 aaaae
+
+#56000
+1aaaaa
+
+#58000
 0aaaaa
 
