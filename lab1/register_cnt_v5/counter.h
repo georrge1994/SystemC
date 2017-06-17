@@ -23,7 +23,7 @@ SC_MODULE(eightbit_register) {
         cout << "Executing new" << endl;
         SC_CTHREAD(register_store, clock.pos());
         async_reset_signal_is(reset, true);
-        reset_signal_is(sreset_n, true);
+        reset_signal_is(sreset_n, false);
     } // End of Constructor
 
 }; // End of Module

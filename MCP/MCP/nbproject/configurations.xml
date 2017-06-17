@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurationDescriptor version="100">
+  <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
+    <logicalFolder name="HeaderFiles"
+                   displayName="Header Files"
+                   projectFiles="true">
+      <itemPath>ALU.h</itemPath>
+      <itemPath>Cache.h</itemPath>
+      <itemPath>Command_decoder.h</itemPath>
+      <itemPath>Memory_controller.h</itemPath>
+      <itemPath>Top.h</itemPath>
+      <itemPath>Virtual_memory.h</itemPath>
+      <itemPath>io_module.h</itemPath>
+    </logicalFolder>
+    <logicalFolder name="ResourceFiles"
+                   displayName="Resource Files"
+                   projectFiles="true">
+    </logicalFolder>
+    <logicalFolder name="SourceFiles"
+                   displayName="Source Files"
+                   projectFiles="true">
+      <itemPath>ALU.cpp</itemPath>
+      <itemPath>Cache.cpp</itemPath>
+      <itemPath>Command_decoder.cpp</itemPath>
+      <itemPath>Memory_controller.cpp</itemPath>
+      <itemPath>Top.cpp</itemPath>
+      <itemPath>Virtual_memory.cpp</itemPath>
+      <itemPath>io_module.cpp</itemPath>
+      <itemPath>testbench.cpp</itemPath>
+    </logicalFolder>
+    <logicalFolder name="TestFiles"
+                   displayName="Test Files"
+                   projectFiles="false"
+                   kind="TEST_LOGICAL_FOLDER">
+    </logicalFolder>
+    <logicalFolder name="ExternalFiles"
+                   displayName="Important Files"
+                   projectFiles="false"
+                   kind="IMPORTANT_FILES_FOLDER">
+      <itemPath>Makefile</itemPath>
+    </logicalFolder>
+  </logicalFolder>
+  <sourceRootList>
+    <Elem>/home/oem/Документы/netbeans_projects/lab3/fifo</Elem>
+  </sourceRootList>
+  <projectmakefile>Makefile</projectmakefile>
+  <confs>
+    <conf name="Debug" type="1">
+      <toolsSet>
+        <compilerSet>default</compilerSet>
+        <dependencyChecking>true</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <compileType>
+        <ccTool>
+          <standard>8</standard>
+          <incDir>
+            <pElem>/home/oem/Programs/include</pElem>
+            <pElem>/home/oem/Документы/netbeans_projects/MCP/MCP</pElem>
+          </incDir>
+        </ccTool>
+        <linkerTool>
+          <linkerAddLib>
+            <pElem>/home/oem/Programs/lib</pElem>
+          </linkerAddLib>
+          <linkerDynSerch>
+            <pElem>/home/oem/Programs/lib</pElem>
+          </linkerDynSerch>
+          <linkerLibItems>
+            <linkerLibLibItem>systemc</linkerLibLibItem>
+          </linkerLibItems>
+        </linkerTool>
+      </compileType>
+      <item path="ALU.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="ALU.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Cache.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Cache.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Command_decoder.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Command_decoder.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Memory_controller.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Memory_controller.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Top.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Top.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Virtual_memory.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Virtual_memory.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="io_module.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="io_module.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="testbench.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+    </conf>
+    <conf name="Release" type="1">
+      <toolsSet>
+        <compilerSet>default</compilerSet>
+        <dependencyChecking>true</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <compileType>
+        <cTool>
+          <developmentMode>5</developmentMode>
+        </cTool>
+        <ccTool>
+          <developmentMode>5</developmentMode>
+        </ccTool>
+        <fortranCompilerTool>
+          <developmentMode>5</developmentMode>
+        </fortranCompilerTool>
+        <asmTool>
+          <developmentMode>5</developmentMode>
+        </asmTool>
+      </compileType>
+      <item path="ALU.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="ALU.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Cache.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Cache.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Command_decoder.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Command_decoder.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Memory_controller.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Memory_controller.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Top.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Top.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Virtual_memory.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Virtual_memory.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="io_module.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="io_module.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="testbench.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+    </conf>
+  </confs>
+</configurationDescriptor>

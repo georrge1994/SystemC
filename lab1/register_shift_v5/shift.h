@@ -8,8 +8,7 @@ SC_MODULE(eightbit_register) {
     sc_in<bool> reset; // active high, asynchronous Reset input
     sc_in<bool> sreset_n; // active high, synch Reset input
     sc_in<bool> ena; // ena is ena
-    sc_in<bool> load;   // load data
-    sc_in<sc_uint<8> >  c_in;       // 8 bit vector input
+    sc_in<sc_uint<1> >  c_in;       // 8 bit vector input
     sc_out<sc_uint<8> > d_out;      // 8 bit vector output
     sc_out<sc_uint<1> > c_out;      // 1 bit
 
@@ -23,14 +22,13 @@ SC_MODULE(eightbit_register) {
             reset("reset"),
             sreset_n("sreset_n"),
             ena("ena"),
-            load("load"),
             c_in("c_in"),
             c_out("c_out"), 
             d_out("d_out") {
         cout << "Executing new" << endl;
         SC_CTHREAD(register_store, clock.pos());
         async_reset_signal_is(reset, true);
-        reset_signal_is(sreset_n, true);
+        reset_signal_is(sreset_n, false);
     } // End of Constructor
 
 }; // End of Module
